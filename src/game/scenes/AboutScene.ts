@@ -81,9 +81,9 @@ export class AboutScene extends Phaser.Scene {
     const description = this.add.text(
       GAME_WIDTH / 2,
       340,
-      'A pixel-art 2D fighting game built with TypeScript and Phaser 3.\n\n' +
-      'Features local multiplayer, story mode, and classic arcade combat.\n' +
-      'Inspired by retro fighting games with modern web technologies.',
+      'Um jogo de luta 2D em pixel art desenvolvido com TypeScript e Phaser 3 para Semana do Curso Técnico em Desenvolvimento de Sistemas.\n\n' +
+      'Inclui multiplayer local, modo história e combate clássico de arcade.\n' +
+      'Inspirado em jogos de luta retrô com tecnologias web modernas.',
       {
         fontFamily: 'Arial, sans-serif',
         fontSize: '18px',
@@ -102,7 +102,7 @@ export class AboutScene extends Phaser.Scene {
     });
     creatorLabel.setOrigin(0.5);
 
-    const creatorName = this.add.text(GAME_WIDTH / 2, 490, 'mITyJohn', {
+    const creatorName = this.add.text(GAME_WIDTH / 2, 490, 'Ricardo, Walter, Eloisa, Lara, Emanuel Oss, Maria E, Pyetro, Anabelly', {
       fontFamily: 'Impact, sans-serif',
       fontSize: '32px',
       color: '#ffcc00',
@@ -110,30 +110,6 @@ export class AboutScene extends Phaser.Scene {
       strokeThickness: 3,
     });
     creatorName.setOrigin(0.5);
-
-    // Website link (clickable)
-    const websiteText = this.add.text(GAME_WIDTH / 2, 540, '🌐 mityjohn.com', {
-      fontFamily: 'Arial, sans-serif',
-      fontSize: '24px',
-      color: '#66aaff',
-    });
-    websiteText.setOrigin(0.5);
-    websiteText.setInteractive({ useHandCursor: true });
-
-    // Hover effects for link
-    websiteText.on('pointerover', () => {
-      websiteText.setColor('#99ccff');
-      websiteText.setScale(1.05);
-    });
-
-    websiteText.on('pointerout', () => {
-      websiteText.setColor('#66aaff');
-      websiteText.setScale(1);
-    });
-
-    websiteText.on('pointerdown', () => {
-      window.open('https://mityjohn.com/', '_blank');
-    });
 
     // Technologies used
     const techLabel = this.add.text(GAME_WIDTH / 2, 600, 'Built with', {
