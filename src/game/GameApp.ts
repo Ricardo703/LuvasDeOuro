@@ -34,7 +34,6 @@ export class GameApp {
   public start(): void {
     logger.info('Starting Luvas de Ouro...');
 
-    const STORAGE_KEY = 'LuvasDeOuroTheme';
     const config = createGameConfig({
       scenes: [
         BootScene,
