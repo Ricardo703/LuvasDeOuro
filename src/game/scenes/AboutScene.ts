@@ -31,7 +31,7 @@ export class AboutScene extends Phaser.Scene {
     this.createBackgroundEffects();
 
     // Title
-    const title = this.add.text(GAME_WIDTH / 2, 80, 'ABOUT', {
+    const title = this.add.text(GAME_WIDTH / 2, 80, 'Sobre', {
       fontFamily: 'Impact, sans-serif',
       fontSize: '64px',
       color: '#ffcc00',
@@ -96,7 +96,7 @@ export class AboutScene extends Phaser.Scene {
     description.setOrigin(0.5);
 
     // Creator section
-    const creatorLabel = this.add.text(GAME_WIDTH / 2, 460, 'Created by', {
+    const creatorLabel = this.add.text(GAME_WIDTH / 2, 460, 'Criado por', {
       fontFamily: 'Arial, sans-serif',
       fontSize: '16px',
       color: '#888888',
@@ -113,7 +113,7 @@ export class AboutScene extends Phaser.Scene {
     creatorName.setOrigin(0.5);
 
     // Technologies used
-    const techLabel = this.add.text(GAME_WIDTH / 2, 600, 'Built with', {
+    const techLabel = this.add.text(GAME_WIDTH / 2, 600, 'Feito com', {
       fontFamily: 'Arial, sans-serif',
       fontSize: '14px',
       color: '#666666',
@@ -136,7 +136,7 @@ export class AboutScene extends Phaser.Scene {
     const instructions = this.add.text(
       GAME_WIDTH / 2,
       GAME_HEIGHT - 40,
-      'Press ESC or ENTER to go back',
+      'Pressione ESC ou BACKSPACE para voltar',
       {
         fontFamily: 'Arial, sans-serif',
         fontSize: '20px',
