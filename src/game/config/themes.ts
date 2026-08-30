@@ -1,7 +1,7 @@
 /**
  * @fileoverview Theme system for switchable visual styles
  * @see docs/SPEC_KIT.md - This file follows the spec-kit contract
- * @see .github/skills/devoxx-theme/SKILL.md - Devoxx France 2026 palette
+ * @see .github/skills/luvas-de-ouro-theme/SKILL.md - Luvas De Ouro palette
  */
 
 /* eslint-disable no-undef */
@@ -14,10 +14,10 @@ import { logger } from '../utils/logger';
 // =============================================================================
 
 /** Available theme identifiers */
-export type ThemeId = 'classic' | 'devoxx_fr_2026';
+export type ThemeId = 'classic' | 'luvas_de_ouro';
 
 /** All registered theme IDs */
-export const THEME_IDS: readonly ThemeId[] = ['classic', 'devoxx_fr_2026'] as const;
+export const THEME_IDS: readonly ThemeId[] = ['classic', 'luvas_de_ouro'] as const;
 
 /** Color palette for a theme */
 export interface ThemeColors {
@@ -121,10 +121,10 @@ const CLASSIC_THEME: GameTheme = {
   },
 };
 
-/** Devoxx France 2026 conference branding theme */
-const DEVOXX_FR_2026_THEME: GameTheme = {
-  id: 'devoxx_fr_2026',
-  name: 'Devoxx FR 2026',
+/** Luvas De Ouro theme */
+const LUVAS_DE_OURO_THEME: GameTheme = {
+  id: 'luvas_de_ouro',
+  name: 'Luvas De Ouro',
   colors: {
     primary: '#E7B127',
     primaryHex: 0xe7b127,
@@ -162,7 +162,7 @@ const DEVOXX_FR_2026_THEME: GameTheme = {
 /** Map of all themes by ID */
 const THEMES: Record<ThemeId, GameTheme> = {
   classic: CLASSIC_THEME,
-  devoxx_fr_2026: DEVOXX_FR_2026_THEME,
+  luvas_de_ouro: LUVAS_DE_OURO_THEME,
 };
 
 const STORAGE_KEY = 'luvasDeOuroTheme';

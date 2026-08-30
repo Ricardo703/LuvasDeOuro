@@ -1,10 +1,10 @@
 ---
 name: codebase-knowledge
-description: "DevoxxFighter codebase map and conventions. Use when: navigating project structure, finding where code lives, understanding module boundaries, checking naming conventions, locating registries, understanding scene flow, checking asset pipeline, or onboarding to the codebase. Covers TypeScript/Phaser 3/Vite/Vitest project layout."
+description: "Luvas De Ouro codebase map and conventions. Use when: navigating project structure, finding where code lives, understanding module boundaries, checking naming conventions, locating registries, understanding scene flow, checking asset pipeline, or onboarding to the codebase. Covers TypeScript/Phaser 3/Vite/Vitest project layout."
 ---
 # Codebase Knowledge
 
-Complete map of the DevoxxFighter project structure, module responsibilities, and conventions.
+Complete map of the Luvas De Ouro project structure, module responsibilities, and conventions.
 
 ## When to Use
 - Finding where to implement a feature

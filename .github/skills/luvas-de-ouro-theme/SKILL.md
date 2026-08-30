@@ -1,15 +1,15 @@
 ---
 name: devoxx-theme
-description: "Devoxx France 2026 visual theme and branding. Use when: styling UI elements, creating slides, updating colors, applying conference theme to game UI, or switching between theme variations. Covers color palette, typography, tone, and theming system."
+description: "Luvas De Ouro visual theme and branding. Use when: styling UI elements, creating slides, updating colors, applying theme to game UI, or switching between theme variations. Covers color palette, typography, tone, and theming system."
 ---
-# Skill: Devoxx France 2026 Theme
+# Skill: Luvas De Ouro Theme
 
 ## Purpose
-Apply the Devoxx France 2026 visual and storytelling style to game UI and slide generation.
+Apply the Luvas De Ouro visual and storytelling style to game UI and slide generation.
 
 ## When to Use
 - Styling game UI elements (menus, health bars, announcements)
-- Creating presentation slides for Devoxx talks
+- Creating presentation slides for Luvas De Ouro talks
 - Reviewing or updating color schemes
 - Adding new theme variations
 - Ensuring brand consistency across the app
@@ -51,7 +51,7 @@ const theme = getActiveTheme();
 
 ### Available Themes
 - `classic` — Original MK-inspired red/gold style
-- `devoxx_fr_2026` — Devoxx France 2026 conference branding
+- `luvas_de_ouro` — Luvas De Ouro branding
 
 ### Adding a New Theme
 1. Add theme definition in `src/game/config/themes.ts`

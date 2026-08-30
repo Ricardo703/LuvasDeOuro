@@ -32,7 +32,7 @@ Colors are managed through the theme system (`src/game/config/themes.ts`). All U
 | Panel | `#222244` | Card/tab backgrounds |
 | Border | `#444466` | Inactive borders |
 
-#### Devoxx France 2026 Theme
+#### Luvas De Ouro Theme
 
 | Role | Hex | Usage |
 |------|-----|-------|
@@ -47,7 +47,7 @@ Themes are selectable in **Settings → Options → Theme**.
 
 ### Typography
 
-| Context | Classic | Devoxx FR 2026 | Notes |
+| Context | Classic | Luvas De Ouro | Notes |
 |---------|---------|----------------|-------|
 | Titles / Headlines | Impact | Pirulen | Large, bold |
 | Body / UI text | Arial | Open Sans | Clean, readable |

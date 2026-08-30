@@ -1,11 +1,11 @@
 # GitHub Pages deployment workflow
-# Deploys main branch to root and DevoxxFighter branch to /DevoxxFighter/ sub-path
+# Deploys main branch to root and LuvasDeOuro branch to /LuvasDeOuro/ sub-path
 
 name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: [main, DevoxxFighter]
+    branches: [main, LuvasDeOuro]
   # Allow manual trigger from Actions tab
   workflow_dispatch:
 
@@ -22,7 +22,7 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  # Build job — builds main (root) and DevoxxFighter (sub-path)
+  # Build job — builds main (root) and LuvasDeOuro (sub-path)
   build:
     runs-on: ubuntu-latest
     steps:
@@ -65,46 +65,46 @@ jobs:
         env:
           BASE_URL: /${{ github.event.repository.name }}/
 
-      # ── DevoxxFighter branch (sub-path /DevoxxFighter/) ─────
-      - name: Checkout DevoxxFighter branch
+      # ── LuvasDeOuro branch (sub-path /LuvasDeOuro/) ─────
+      - name: Checkout LuvasDeOuro branch
         uses: actions/checkout@v4
         with:
-          ref: DevoxxFighter
+          ref: LuvasDeOuro
           path: dev-branch
 
-      - name: Install dependencies (DevoxxFighter)
+      - name: Install dependencies (LuvasDeOuro)
         working-directory: dev-branch
         run: npm ci
 
-      - name: Lint (DevoxxFighter)
+      - name: Lint (LuvasDeOuro)
         working-directory: dev-branch
         run: npm run lint
 
-      - name: Type check (DevoxxFighter)
+      - name: Type check (LuvasDeOuro)
         working-directory: dev-branch
         run: npm run typecheck
 
-      - name: Tests (DevoxxFighter)
+      - name: Tests (LuvasDeOuro)
         working-directory: dev-branch
         run: npm run test
 
-      - name: Validate assets (DevoxxFighter)
+      - name: Validate assets (LuvasDeOuro)
         working-directory: dev-branch
         run: npm run validate:assets
         continue-on-error: true
 
-      - name: Build DevoxxFighter
+      - name: Build LuvasDeOuro
         working-directory: dev-branch
         run: npm run build
         env:
-          BASE_URL: /${{ github.event.repository.name }}/DevoxxFighter/
+          BASE_URL: /${{ github.event.repository.name }}/LuvasDeOuro/
 
       # ── Assemble combined deployment ────────────────────────
       - name: Assemble deployment directory
         run: |
-          mkdir -p deploy/DevoxxFighter
+          mkdir -p deploy/LuvasDeOuro
           cp -r main-branch/dist/* deploy/
-          cp -r dev-branch/dist/* deploy/DevoxxFighter/
+          cp -r dev-branch/dist/* deploy/LuvasDeOuro/
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
