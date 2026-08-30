@@ -1,5 +1,5 @@
 /**
- * @fileoverview Main entry point for DevoxxFighter
+ * @fileoverview Main entry point for Luvas de Ouro
  * @see docs/SPEC_KIT.md - This file follows the spec-kit contract
  */
 

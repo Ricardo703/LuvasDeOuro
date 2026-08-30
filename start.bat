@@ -1,8 +1,8 @@
 @echo off
-title DevoxxFighter
+title Luvas de Ouro
 
 echo ========================================
-echo         DevoxxFighter Game Launcher
+echo         Luvas de Ouro Game Launcher
 echo ========================================
 echo.
 

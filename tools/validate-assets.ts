@@ -295,7 +295,7 @@ function validateBackground(
  */
 function main(): void {
   console.log('='.repeat(60));
-  console.log('DevoxxFighter Asset Validation (Pack Format)');
+  console.log('Luvas de Ouro Asset Validation (Pack Format)');
   console.log('='.repeat(60));
 
   errors = [];
