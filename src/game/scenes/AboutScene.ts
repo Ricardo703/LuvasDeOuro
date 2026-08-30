@@ -82,6 +82,8 @@ export class AboutScene extends Phaser.Scene {
       GAME_WIDTH / 2,
       340,
       'Um jogo de luta 2D em pixel art desenvolvido com TypeScript e Phaser 3.\n\n' +
+      'para Semana do Curso Técnico em Desenvolvimento de Sistemas.\n\n'
+      +
       'Inclui multiplayer local, modo história e combate clássico de arcade.\n' +
       'Inspirado em jogos de luta retrô, utilizando tecnologias web modernas.',
       {
