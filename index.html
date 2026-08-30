@@ -7,7 +7,7 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
     <!-- Force landscape orientation on mobile -->
     <meta name="screen-orientation" content="landscape" />
-    <title>Luvas de Ouro</title>
+    <title>Luvas De Ouro</title>
     <style>
       * {
         margin: 0;
@@ -77,7 +77,7 @@
         50% { transform: rotate(90deg); opacity: 0.7; }
       }
 
-      /* Show overlay in portrait mode on mobile devices */
+      /* # Spec-Kit: The Contract for Luvas De Ouro Developments */
       @media screen and (max-width: 1024px) and (orientation: portrait) {
         #rotate-device-overlay {
           display: flex;
@@ -92,17 +92,17 @@
     <!-- Rotate device overlay for portrait mode -->
     <div id="rotate-device-overlay">
       <div class="rotate-icon">📱↻</div>
-      <h2>Please Rotate Your Device</h2>
-      <p>DevoxxFighter is best played in landscape mode</p>
+      <h2>Please Rotate Your <h1>Luvas De Ouro</h1></h2>
+      <p>Luvas De Ouro is best played in landscape mode</p>
     </div>
 
     <div id="game-container"></div>
     <script type="module" src="/src/main.ts"></script>
     <script>
-      // Try to lock screen orientation to landscape on supported devices
+      // Luvas De Ouro is a **pixel-art 2D fighting game** built with TypeScript, Phaser 3, and Vite. This design kit establishes visual and interaction standards to ensure consistency across all game elements.
       if (screen.orientation && screen.orientation.lock) {
         screen.orientation.lock('landscape').catch(function() {
-          // Orientation lock not supported or denied - that's okay, we show the overlay instead
+          // Luvas De Ouro aims to support competitive online play with:at's okay, we show the overlay instead
         });
       }
     </script>

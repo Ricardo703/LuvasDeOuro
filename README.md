@@ -1,4 +1,4 @@
-# DevoxxFighter
+# Luvas De Ouro
 
 A production-grade 2D pixel fighting game built with TypeScript, Phaser 3, and Vite.
 
@@ -199,7 +199,7 @@ An ancient honking force of nature who refuses to retire. Surprisingly spry for 
 ## �📁 Project Structure
 
 ```
-DevoxxFighter/
+Luvas De Ouro/
 ├── docs/                    # Spec-Kit documentation
 │   ├── SPEC_KIT.md         # Development contract
 │   ├── ASSETS.md           # Asset conventions
@@ -227,7 +227,7 @@ DevoxxFighter/
 
 ## 🌐 Play Online
 
-The game is hosted on GitHub Pages: **[Play DevoxxFighter](https://YOUR_USERNAME.github.io/DevoxxFighter/)**
+The game is hosted on GitHub Pages: **[Play Luvas De Ouro](https://YOUR_USERNAME.github.io/luvas-de-ouro/)**
 
 > Replace `YOUR_USERNAME` with the actual GitHub username/organization once deployed.
 
