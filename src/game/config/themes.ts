@@ -165,7 +165,7 @@ const THEMES: Record<ThemeId, GameTheme> = {
   devoxx_fr_2026: DEVOXX_FR_2026_THEME,
 };
 
-const STORAGE_KEY = 'devoxxFighterTheme';
+const STORAGE_KEY = 'luvasDeOuroTheme';
 
 /** Currently active theme ID (cached) */
 let activeThemeId: ThemeId = 'classic';

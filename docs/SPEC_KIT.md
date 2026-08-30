@@ -1,4 +1,4 @@
-# Spec-Kit: The Contract for DevoxxFighter Development
+# Spec-Kit: The Contract for Luvas De Ouro Development
 
 > **This document is the source of truth.** All code changes MUST follow this contract.
 
