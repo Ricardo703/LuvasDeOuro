@@ -139,7 +139,7 @@ export class CharacterSelectScene extends Phaser.Scene {
 
     // Title
     this.add
-      .text(GAME_WIDTH / 2, 50, 'SELECT YOUR FIGHTER', {
+      .text(GAME_WIDTH / 2, 50, 'SELECIONE SEU PERSONAGEM', {
         fontFamily: 'Impact, sans-serif',
         fontSize: '48px',
         color: '#ffcc00',
@@ -319,7 +319,7 @@ export class CharacterSelectScene extends Phaser.Scene {
     this.p1TaglineText.setOrigin(0.5);
 
     // Bio section
-    this.add.text(PREVIEW_X_P1, BIO_LABEL_Y, 'STORY', {
+    this.add.text(PREVIEW_X_P1, BIO_LABEL_Y, 'HISTÓRIA', {
       fontFamily: 'Impact, sans-serif',
       fontSize: '12px',
       color: '#888888',
@@ -336,7 +336,7 @@ export class CharacterSelectScene extends Phaser.Scene {
     this.p1BioText.setOrigin(0.5, 0);
 
     // Motivation section
-    this.add.text(PREVIEW_X_P1, MOTIVATION_LABEL_Y, 'MOTIVATION', {
+    this.add.text(PREVIEW_X_P1, MOTIVATION_LABEL_Y, 'MOTIVAÇÃO', {
       fontFamily: 'Impact, sans-serif',
       fontSize: '12px',
       color: '#888888',
@@ -396,7 +396,7 @@ export class CharacterSelectScene extends Phaser.Scene {
     this.p2TaglineText.setOrigin(0.5);
 
     // Bio section
-    this.add.text(PREVIEW_X_P2, BIO_LABEL_Y, 'STORY', {
+    this.add.text(PREVIEW_X_P2, BIO_LABEL_Y, 'HISTÓRIA', {
       fontFamily: 'Impact, sans-serif',
       fontSize: '12px',
       color: '#888888',
@@ -413,7 +413,7 @@ export class CharacterSelectScene extends Phaser.Scene {
     this.p2BioText.setOrigin(0.5, 0);
 
     // Motivation section
-    this.add.text(PREVIEW_X_P2, MOTIVATION_LABEL_Y, 'MOTIVATION', {
+    this.add.text(PREVIEW_X_P2, MOTIVATION_LABEL_Y, 'MOTIVAÇÃO', {
       fontFamily: 'Impact, sans-serif',
       fontSize: '12px',
       color: '#888888',
@@ -438,12 +438,12 @@ export class CharacterSelectScene extends Phaser.Scene {
     let instructionText: string;
     if (this.isTouchMode) {
       instructionText = this.gameMode === '1P'
-        ? 'Tap a fighter to select • Tap FIGHT to start'
-        : 'Tap P1 fighter • Tap P2 fighter • Tap FIGHT';
+        ? 'Selecione o personagem • Toque em LUTA para iniciar'
+        : 'Selecione o personagem 1 • Selecione o personagem 2 • Toque em LUTA';
     } else {
       instructionText = this.gameMode === '1P'
-        ? `${p1Keys} to move • F to confirm • ENTER: Start vs CPU`
-        : `P1: ${p1Keys} + F to confirm | P2: Arrows + Numpad1 to confirm | ENTER: Continue`;
+        ? `${p1Keys} para mover • F para confirmar • ENTER: Iniciar luta contra IA`
+        : `P1: ${p1Keys} + F para confirmar | P2: Setas + Numpad1 para confirmar | ENTER: Continuar`;
     }
     
     this.instructionsText = this.add.text(
@@ -465,7 +465,7 @@ export class CharacterSelectScene extends Phaser.Scene {
     this.startButton = this.createTouchButton(
       GAME_WIDTH / 2,
       GAME_HEIGHT - 80,
-      'FIGHT!',
+      'LUTAR!',
       0x00aa00,
       () => this.onFightButtonTapped()
     );
@@ -475,7 +475,7 @@ export class CharacterSelectScene extends Phaser.Scene {
     this.p1ChangeButton = this.createSmallTouchButton(
       130,
       GAME_HEIGHT - 80,
-      '↻ CHANGE P1',
+      '↻ MUDAR P1',
       0x0066aa,
       () => this.onChangeP1Tapped()
     );
@@ -484,7 +484,7 @@ export class CharacterSelectScene extends Phaser.Scene {
     this.p2ChangeButton = this.createSmallTouchButton(
       GAME_WIDTH - 130,
       GAME_HEIGHT - 80,
-      '↻ CHANGE P2',
+      '↻ MUDAR P2',
       0xaa3333,
       () => this.onChangeP2Tapped()
     );
@@ -686,7 +686,7 @@ export class CharacterSelectScene extends Phaser.Scene {
       PORTRAIT_SIZE + 10,
       PORTRAIT_SIZE + 10
     );
-    logger.info(`P1 selected: ${FIGHTER_IDS[this.p1Index]}`);
+    logger.info(`P1 selecionado: ${FIGHTER_IDS[this.p1Index]}`);
   }
 
   /** Confirm P2 selection (shared logic) */
@@ -707,7 +707,7 @@ export class CharacterSelectScene extends Phaser.Scene {
       PORTRAIT_SIZE + 16,
       PORTRAIT_SIZE + 16
     );
-    logger.info(`P2 selected: ${FIGHTER_IDS[this.p2Index]}`);
+    logger.info(`P2 selecionado: ${FIGHTER_IDS[this.p2Index]}`);
   }
 
   /** Handle fight button tap */
@@ -737,17 +737,17 @@ export class CharacterSelectScene extends Phaser.Scene {
     // Update instructions to show current step
     if (this.gameMode === '2P') {
       if (!this.p1Confirmed) {
-        this.instructionsText.setText('Tap to select P1 fighter (BLUE)');
+        this.instructionsText.setText('Toque para selecionar o lutador do P1 (AZUL)');
       } else if (!this.p2Confirmed) {
-        this.instructionsText.setText('Tap to select P2 fighter (RED)');
+        this.instructionsText.setText('Toque para selecionar o lutador do P2 (VERMELHO)');
       } else {
-        this.instructionsText.setText('Tap FIGHT! to begin');
+        this.instructionsText.setText('Toque LUTAR! para começar');
       }
     } else {
       if (!this.p1Confirmed) {
-        this.instructionsText.setText('Tap to select your fighter');
+        this.instructionsText.setText('Toque para selecionar seu lutador');
       } else {
-        this.instructionsText.setText('Tap FIGHT! to battle the CPU');
+        this.instructionsText.setText('Toque LUTAR! para lutar contra a IA');
       }
     }
   }
@@ -793,7 +793,7 @@ export class CharacterSelectScene extends Phaser.Scene {
     this.backButton.add(bg);
 
     // Back arrow and text
-    const text = this.add.text(0, 0, '◀ BACK', {
+    const text = this.add.text(0, 0, '◀ VOLTAR', {
       fontFamily: 'Arial, sans-serif',
       fontSize: '16px',
       color: '#ffffff',
@@ -947,19 +947,19 @@ export class CharacterSelectScene extends Phaser.Scene {
     const p2Fighter = FIGHTER_REGISTRY[p2FighterId];
     
     // Update P1 info
-    this.p1NameText.setText(p1Fighter?.displayName ?? 'Unknown');
+    this.p1NameText.setText(p1Fighter?.displayName ?? 'Desconhecido');
     this.p1TaglineText.setText(`"${p1Fighter?.tagline ?? ''}"`);
     this.p1BioText.setText(p1Fighter?.bio ?? '');
-    const p1Special = p1Fighter?.specialCombo ? `SPECIAL: ${p1Fighter.specialCombo}` : '';
+    const p1Special = p1Fighter?.specialCombo ? `ESPECIAL: ${p1Fighter.specialCombo}` : '';
     this.p1MotivationText.setText(`${p1Fighter?.motivation ?? ''}\n\n${p1Special}`);
     
     // Update P2 info (show CPU label in 1P mode)
-    const p2Label = this.gameMode === '1P' ? '🤖 CPU' : '';
-    const p2Name = p2Fighter?.displayName ?? 'Unknown';
+    const p2Label = this.gameMode === '1P' ? '🤖 IA' : '';
+    const p2Name = p2Fighter?.displayName ?? 'Desconhecido';
     this.p2NameText.setText(p2Label ? `${p2Name}\n${p2Label}` : p2Name);
     this.p2TaglineText.setText(`"${p2Fighter?.tagline ?? ''}"`);
     this.p2BioText.setText(p2Fighter?.bio ?? '');
-    const p2Special = p2Fighter?.specialCombo ? `SPECIAL: ${p2Fighter.specialCombo}` : '';
+    const p2Special = p2Fighter?.specialCombo ? `ESPECIAL: ${p2Fighter.specialCombo}` : '';
     this.p2MotivationText.setText(`${p2Fighter?.motivation ?? ''}\n\n${p2Special}`);
   }
 
