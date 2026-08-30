@@ -40,7 +40,7 @@ export class BootScene extends Phaser.Scene {
     this.setupInputDefaults();
 
     // Create a simple loading text
-    this.loadingText = this.add.text(GAME_WIDTH / 2, GAME_HEIGHT / 2, 'carregando...', {
+    this.loadingText = this.add.text(GAME_WIDTH / 2, GAME_HEIGHT / 2, 'Loading registries...', {
       fontFamily: 'monospace',
       fontSize: '24px',
       color: '#ffffff',
