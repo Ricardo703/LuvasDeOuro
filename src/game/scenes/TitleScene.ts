@@ -94,7 +94,7 @@ export class TitleScene extends Phaser.Scene {
     this.subtitleText = this.add.text(
       GAME_WIDTH / 2,
       300,
-      '⚔️ PIXEL KOMBAT ⚔️',
+      '⚔️ LUTA PIXEL ⚔️',
       {
         fontFamily: theme.fonts.body,
         fontSize: '32px',
@@ -119,7 +119,7 @@ export class TitleScene extends Phaser.Scene {
     this.pressStartText = this.add.text(
       GAME_WIDTH / 2,
       500,
-      'PRESS ENTER TO START',
+      'APERTE ENTER PARA INICIAR',
       {
         fontFamily: theme.fonts.body,
         fontSize: '28px',
@@ -151,7 +151,7 @@ export class TitleScene extends Phaser.Scene {
     const creditsText = this.add.text(
       GAME_WIDTH / 2,
       GAME_HEIGHT - 60,
-      'A 2D Pixel Fighting Game',
+      'Uma aventura de luta 2D',
       {
         fontFamily: 'Arial, sans-serif',
         fontSize: '18px',
@@ -163,7 +163,7 @@ export class TitleScene extends Phaser.Scene {
     const versionText = this.add.text(
       GAME_WIDTH / 2,
       GAME_HEIGHT - 35,
-      'v1.0.0 | Built with Phaser 3',
+      'v1.0.0 | Feito com Phaser 3',
       {
         fontFamily: 'Arial, sans-serif',
         fontSize: '14px',
@@ -191,9 +191,9 @@ export class TitleScene extends Phaser.Scene {
     const menuSpacing = 50;
 
     const menuOptions = [
-      { label: '▶ START GAME', action: () => this.startGame() },
-      { label: '⚙ SETTINGS', action: () => this.goToSettings() },
-      { label: 'ℹ ABOUT', action: () => this.goToAbout() },
+      { label: '▶ COMEÇAR', action: () => this.startGame() },
+      { label: '⚙ CONFIGURAÇÕES', action: () => this.goToSettings() },
+      { label: 'ℹ SOBRE', action: () => this.goToAbout() },
     ];
 
     const theme = getActiveTheme();

@@ -139,7 +139,7 @@ export class StoryModeScene extends Phaser.Scene {
     backButton.add(bg);
 
     // Back arrow and text
-    const text = this.add.text(0, 0, '◀ BACK', {
+    const text = this.add.text(0, 0, '◀ VOLTAR', {
       fontFamily: 'Arial, sans-serif',
       fontSize: '16px',
       color: '#ffffff',
@@ -272,7 +272,7 @@ export class StoryModeScene extends Phaser.Scene {
     this.createStoryTextBox(this.currentFight.preFightText, 480);
 
     // Fight button
-    this.createActionButton(GAME_WIDTH / 2, GAME_HEIGHT - 80, 'FIGHT!', () => {
+    this.createActionButton(GAME_WIDTH / 2, GAME_HEIGHT - 80, 'LUTAR!', () => {
       this.startFight();
     });
 
@@ -294,7 +294,7 @@ export class StoryModeScene extends Phaser.Scene {
 
   /** Show continue screen after losing */
   private showContinueScreen(): void {
-    const title = this.add.text(GAME_WIDTH / 2, 150, 'DEFEATED!', {
+    const title = this.add.text(GAME_WIDTH / 2, 150, 'DERROTADO!', {
       fontFamily: 'Impact, sans-serif',
       fontSize: '64px',
       color: '#ff4444',
@@ -315,7 +315,7 @@ export class StoryModeScene extends Phaser.Scene {
     );
     continueText.setOrigin(0.5);
 
-    const prompt = this.add.text(GAME_WIDTH / 2, 350, 'Will you continue the fight?', {
+    const prompt = this.add.text(GAME_WIDTH / 2, 350, 'Você continuará a lutar?', {
       fontFamily: 'Arial, sans-serif',
       fontSize: '22px',
       color: '#cccccc',
@@ -323,13 +323,13 @@ export class StoryModeScene extends Phaser.Scene {
     prompt.setOrigin(0.5);
 
     // Continue button
-    this.createActionButton(GAME_WIDTH / 2 - 120, 450, 'CONTINUE', () => {
+    this.createActionButton(GAME_WIDTH / 2 - 120, 450, 'CONTINUAR', () => {
       this.fightResult = null;
       this.showPreFightScreen();
     });
 
     // Give up button
-    this.createActionButton(GAME_WIDTH / 2 + 120, 450, 'GIVE UP', () => {
+    this.createActionButton(GAME_WIDTH / 2 + 120, 450, 'DESISTIR', () => {
       this.scene.start('ModeSelectScene');
     }, 0x882222);
 
@@ -366,7 +366,7 @@ export class StoryModeScene extends Phaser.Scene {
     // Play game over audio
     getAudioManager().play('game_over');
 
-    const title = this.add.text(GAME_WIDTH / 2, 200, 'GAME OVER', {
+    const title = this.add.text(GAME_WIDTH / 2, 200, 'DERROTADO!', {
       fontFamily: 'Impact, sans-serif',
       fontSize: '72px',
       color: '#ff4444',
@@ -389,12 +389,12 @@ export class StoryModeScene extends Phaser.Scene {
     stats.setOrigin(0.5);
 
     // Try again button
-    this.createActionButton(GAME_WIDTH / 2 - 120, 450, 'TRY AGAIN', () => {
+    this.createActionButton(GAME_WIDTH / 2 - 120, 450, 'TENTAR NOVAMENTE', () => {
       this.scene.start('StorySelectScene');
     });
 
     // Main menu button
-    this.createActionButton(GAME_WIDTH / 2 + 120, 450, 'MAIN MENU', () => {
+    this.createActionButton(GAME_WIDTH / 2 + 120, 450, 'MENU PRINCIPAL', () => {
       this.scene.start('ModeSelectScene');
     }, 0x444466);
   }
@@ -407,7 +407,7 @@ export class StoryModeScene extends Phaser.Scene {
     // Celebration effects
     this.createVictoryEffects();
 
-    const title = this.add.text(GAME_WIDTH / 2, 120, '🏆 CHAMPION! 🏆', {
+    const title = this.add.text(GAME_WIDTH / 2, 120, '🏆 CAMPEÃO! 🏆', {
       fontFamily: 'Impact, sans-serif',
       fontSize: '64px',
       color: '#ffcc00',
@@ -432,7 +432,7 @@ export class StoryModeScene extends Phaser.Scene {
     const playerSprite = this.add.sprite(GAME_WIDTH / 2, 280, playerTextureKey, 0);
     playerSprite.setScale(4);
 
-    const playerName = this.add.text(GAME_WIDTH / 2, 400, player?.displayName ?? 'Champion', {
+    const playerName = this.add.text(GAME_WIDTH / 2, 400, player?.displayName ?? 'Campeão', {
       fontFamily: 'Impact, sans-serif',
       fontSize: '36px',
       color: '#00aaff',
@@ -443,7 +443,7 @@ export class StoryModeScene extends Phaser.Scene {
 
     // Victory text
     const lastFight = this.fights[this.fights.length - 1];
-    const victoryText = lastFight?.victoryText ?? 'You are the champion!';
+    const victoryText = lastFight?.victoryText ?? 'Você é o campeão!';
     
     this.createStoryTextBox(victoryText, 450, 0xffcc00);
 
@@ -451,7 +451,7 @@ export class StoryModeScene extends Phaser.Scene {
     const stats = this.add.text(
       GAME_WIDTH / 2,
       580,
-      `Total Victories: ${this.progress.wins} | Continues Used: ${this.progress.losses}`,
+      `Total Vitórias: ${this.progress.wins} | Derrotas: ${this.progress.losses}`,
       {
         fontFamily: 'Arial, sans-serif',
         fontSize: '18px',
@@ -461,7 +461,7 @@ export class StoryModeScene extends Phaser.Scene {
     stats.setOrigin(0.5);
 
     // Main menu button
-    this.createActionButton(GAME_WIDTH / 2, GAME_HEIGHT - 60, 'MAIN MENU', () => {
+    this.createActionButton(GAME_WIDTH / 2, GAME_HEIGHT - 60, 'MENU PRINCIPAL', () => {
       this.scene.start('ModeSelectScene');
     });
   }

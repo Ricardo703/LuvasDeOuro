@@ -239,7 +239,7 @@ export class SettingsScene extends Phaser.Scene {
     const rightCol = relevantBindings.slice(4);     // Combat
 
     // Column headers
-    const movementHeader = this.add.text(GAME_WIDTH / 4, startY, '🎮 MOVEMENT', {
+    const movementHeader = this.add.text(GAME_WIDTH / 4, startY, '🎮 MOVIMENTAÇÃO', {
       fontFamily: theme.fonts.body,
       fontSize: '20px',
       color: theme.colors.primary,
@@ -247,7 +247,7 @@ export class SettingsScene extends Phaser.Scene {
     movementHeader.setOrigin(0.5);
     this.controlsContainer.add(movementHeader);
 
-    const combatHeader = this.add.text(GAME_WIDTH * 3 / 4, startY, '⚔️ COMBAT', {
+    const combatHeader = this.add.text(GAME_WIDTH * 3 / 4, startY, '⚔️ COMBATE', {
       fontFamily: theme.fonts.body,
       fontSize: '20px',
       color: theme.colors.primary,
@@ -295,7 +295,7 @@ export class SettingsScene extends Phaser.Scene {
     const resetBtn = this.add.text(
       GAME_WIDTH / 2,
       GAME_HEIGHT - 70,
-      '[ Reset to Defaults ]',
+      '[ Resetar configurações ]',
       {
         fontFamily: 'Arial, sans-serif',
         fontSize: '18px',

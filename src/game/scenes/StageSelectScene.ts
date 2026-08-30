@@ -216,8 +216,8 @@ export class StageSelectScene extends Phaser.Scene {
 
     // Instructions
     const instructions = this.isTouchMode
-      ? 'Tap Arrows to Browse | Tap Stage to Select'
-      : 'A/D or ←/→: Browse | ENTER: Select';
+      ? 'Setas: Navegar | Stage: Selecionar'
+      : 'A/D ou ←/→: Navegar | ENTER: Selecionar';
     this.add
       .text(
         GAME_WIDTH / 2,
@@ -235,7 +235,7 @@ export class StageSelectScene extends Phaser.Scene {
     if (this.isTouchMode) {
       // Create a confirm button
       const confirmButton = this.add
-        .text(GAME_WIDTH / 2, GAME_HEIGHT / 2, 'TAP TO SELECT', {
+        .text(GAME_WIDTH / 2, GAME_HEIGHT / 2, 'TOQUE PARA SELECIONAR', {
           fontFamily: 'Impact, sans-serif',
           fontSize: '36px',
           color: '#00ff00',

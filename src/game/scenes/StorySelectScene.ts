@@ -44,7 +44,7 @@ export class StorySelectScene extends Phaser.Scene {
     this.cameras.main.setBackgroundColor('#0a0a15');
 
     // Title
-    const title = this.add.text(GAME_WIDTH / 2, 40, '⚔️ STORY MODE ⚔️', {
+    const title = this.add.text(GAME_WIDTH / 2, 40, '⚔️ MODO HISTÓRIA ⚔️', {
       fontFamily: 'Impact, sans-serif',
       fontSize: '42px',
       color: '#ffcc00',
@@ -53,7 +53,7 @@ export class StorySelectScene extends Phaser.Scene {
     });
     title.setOrigin(0.5);
 
-    const subtitle = this.add.text(GAME_WIDTH / 2, 80, 'Choose Your Fighter', {
+    const subtitle = this.add.text(GAME_WIDTH / 2, 80, 'Escolha seu lutador', {
       fontFamily: 'Arial, sans-serif',
       fontSize: '20px',
       color: '#888888',
@@ -95,7 +95,7 @@ export class StorySelectScene extends Phaser.Scene {
     backButton.add(bg);
 
     // Back arrow and text
-    const text = this.add.text(0, 0, '◀ BACK', {
+    const text = this.add.text(0, 0, '◀ VOLTAR', {
       fontFamily: 'Arial, sans-serif',
       fontSize: '16px',
       color: '#ffffff',
@@ -200,7 +200,7 @@ export class StorySelectScene extends Phaser.Scene {
     this.bioText.setOrigin(0.5, 0);
 
     // Motivation label
-    this.add.text(previewX, previewY + 165, 'Motivation:', {
+    this.add.text(previewX, previewY + 165, 'Motivação:', {
       fontFamily: 'Arial, sans-serif',
       fontSize: '11px',
       color: '#666666',
@@ -223,7 +223,7 @@ export class StorySelectScene extends Phaser.Scene {
   private createInstructions(): void {
     const instructY = GAME_HEIGHT - 30;
     
-    this.add.text(50, instructY, '← → to select  |  ENTER to start  |  ESC to go back', {
+    this.add.text(50, instructY, '← → para selecionar  |  ENTER para iniciar  |  ESC para voltar', {
       fontFamily: 'Arial, sans-serif',
       fontSize: '14px',
       color: '#666666',
@@ -239,7 +239,7 @@ export class StorySelectScene extends Phaser.Scene {
     bg.setInteractive({ useHandCursor: true });
     startBtn.add(bg);
 
-    const text = this.add.text(0, 0, 'START STORY', {
+    const text = this.add.text(0, 0, 'COMEÇAR', {
       fontFamily: 'Impact, sans-serif',
       fontSize: '24px',
       color: '#ffffff',

@@ -51,7 +51,7 @@ export class ModeSelectScene extends Phaser.Scene {
     this.createBackgroundEffects();
 
     // Title
-    const title = this.add.text(GAME_WIDTH / 2, 120, 'SELECT MODE', {
+    const title = this.add.text(GAME_WIDTH / 2, 120, 'MODO DE JOGO', {
       fontFamily: 'Impact, sans-serif',
       fontSize: '64px',
       color: '#ffcc00',
@@ -86,7 +86,7 @@ export class ModeSelectScene extends Phaser.Scene {
     const instructions = this.add.text(
       GAME_WIDTH / 2,
       GAME_HEIGHT - 80,
-      '← → to select • ENTER to confirm • ESC to go back',
+      '← → para selecionar  |  ENTER para iniciar  |  ESC para voltar',
       {
         fontFamily: 'Arial, sans-serif',
         fontSize: '22px',
@@ -120,7 +120,7 @@ export class ModeSelectScene extends Phaser.Scene {
     backButton.add(bg);
 
     // Back arrow and text
-    const text = this.add.text(0, 0, '◀ BACK', {
+    const text = this.add.text(0, 0, '◀ VOLTAR', {
       fontFamily: 'Arial, sans-serif',
       fontSize: '16px',
       color: '#ffffff',
@@ -184,8 +184,8 @@ export class ModeSelectScene extends Phaser.Scene {
     const btnStory = this.createModeButton(
       startX,
       buttonY,
-      'STORY MODE',
-      'FIGHT THE BOSS',
+      'MODO HISTÓRIA',
+      'LUTE CONTRA OS CHEFÕES',
       '⚔️',
       true // featured
     );
@@ -195,8 +195,8 @@ export class ModeSelectScene extends Phaser.Scene {
     const btn1P = this.createModeButton(
       startX + buttonSpacing,
       buttonY,
-      'VS CPU',
-      'ARCADE BATTLE',
+      'VS IA',
+      'LUTA CONTRA A MÁQUINA',
       '🤖',
       false
     );
@@ -206,8 +206,8 @@ export class ModeSelectScene extends Phaser.Scene {
     const btn2P = this.createModeButton(
       startX + buttonSpacing * 2,
       buttonY,
-      '2 PLAYERS',
-      'LOCAL VS',
+      '2 JOGADORES',
+      'LUTA LOCAL',
       '👥',
       false
     );
@@ -249,7 +249,7 @@ export class ModeSelectScene extends Phaser.Scene {
 
     // Featured badge for story mode
     if (featured) {
-      const badge = this.add.text(0, -boxHeight / 2 - 15, '★ NEW ★', {
+      const badge = this.add.text(0, -boxHeight / 2 - 15, '★ NOVO ★', {
         fontFamily: 'Arial, sans-serif',
         fontSize: '12px',
         color: '#ffcc00',
