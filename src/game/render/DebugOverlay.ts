@@ -134,20 +134,20 @@ export class DebugOverlay {
    */
   private getControlsHelp(): string {
     return [
-      '=== CONTROLS ===',
+      '=== CONTROLES ===',
       '',
-      'P1 (Left):',
-      '  Move: A/D | Jump: W',
-      '  Attack: F/G | Special: H',
-      '  Block: R | Char: Q/E',
+      'P1 (Esquerda):',
+      '  Mover: A/D | Pular: W',
+      '  Atacar: F/G | Especial: H',
+      '  Bloquear: R | Personagem: Q/E',
       '',
-      'P2 (Right):',
-      '  Move: ←/→ | Jump: ↑',
-      '  Attack: Num1/2 | Spec: Num3',
-      '  Block: Num0 | Char: U/O',
+      'P2 (Direita):',
+      '  Mover: ←/→ | Pular: ↑',
+      '  Atacar: Num1/2 | Especial: Num3',
+      '  Bloquear: Num0 | Personagem: U/O',
       '',
       'Global:',
-      '  Debug: F1 | BG: Z/C',
+      '  Depuração: F1 | Fundo: Z/C',
     ].join('\n');
   }
 
