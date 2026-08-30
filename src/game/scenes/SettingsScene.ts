@@ -73,7 +73,7 @@ export class SettingsScene extends Phaser.Scene {
     this.createBackgroundEffects();
 
     // Title
-    const title = this.add.text(GAME_WIDTH / 2, 60, 'SETTINGS', {
+    const title = this.add.text(GAME_WIDTH / 2, 60, 'CONFIGURAÇÕES', {
       fontFamily: theme.fonts.title,
       fontSize: '56px',
       color: theme.colors.primary,
@@ -111,7 +111,7 @@ export class SettingsScene extends Phaser.Scene {
     const instructions = this.add.text(
       GAME_WIDTH / 2,
       GAME_HEIGHT - 35,
-      '← → Switch tabs • ↑ ↓ Select • ENTER to rebind • ESC to go back',
+      '← → Mudar abas • ↑ ↓ Selecionar • ENTER para reconfigurar • ESC para voltar',
       {
         fontFamily: 'Arial, sans-serif',
         fontSize: '18px',
@@ -129,9 +129,9 @@ export class SettingsScene extends Phaser.Scene {
   /** Create tab buttons */
   private createTabs(): void {
     const tabs = [
-      { key: 'p1', label: 'PLAYER 1' },
-      { key: 'p2', label: 'PLAYER 2' },
-      { key: 'options', label: 'OPTIONS' },
+      { key: 'p1', label: 'JOGADOR 1' },
+      { key: 'p2', label: 'JOGADOR 2' },
+      { key: 'options', label: 'OPÇÕES' },
     ];
 
     const theme = getActiveTheme();
@@ -281,7 +281,7 @@ export class SettingsScene extends Phaser.Scene {
     const hint = this.add.text(
       GAME_WIDTH / 2,
       GAME_HEIGHT - 100,
-      'Select a control and press ENTER to change the key binding',
+      'Selecione um controle e pressione ENTER para alterar a atribuição de tecla.',
       {
         fontFamily: 'Arial, sans-serif',
         fontSize: '16px',
@@ -370,7 +370,7 @@ export class SettingsScene extends Phaser.Scene {
     const rowHeight = 60;
 
     // Keyboard Layout option
-    const layoutLabel = this.add.text(GAME_WIDTH / 2 - 150, startY, 'Keyboard Layout:', {
+    const layoutLabel = this.add.text(GAME_WIDTH / 2 - 150, startY, 'Layout do Teclado:', {
       fontFamily: 'Arial, sans-serif',
       fontSize: '20px',
       color: '#cccccc',
@@ -396,7 +396,7 @@ export class SettingsScene extends Phaser.Scene {
     this.controlsContainer.add(layoutValue);
 
     // P2 Numpad option
-    const numpadLabel = this.add.text(GAME_WIDTH / 2 - 150, startY + rowHeight, 'P2 Uses Numpad:', {
+    const numpadLabel = this.add.text(GAME_WIDTH / 2 - 150, startY + rowHeight, 'P2 usa teclado numérico:', {
       fontFamily: 'Arial, sans-serif',
       fontSize: '20px',
       color: '#cccccc',
@@ -404,7 +404,7 @@ export class SettingsScene extends Phaser.Scene {
     numpadLabel.setOrigin(0, 0.5);
     this.controlsContainer.add(numpadLabel);
 
-    const numpadValue = this.add.text(GAME_WIDTH / 2 + 100, startY + rowHeight, this.useNumpad ? 'YES' : 'NO', {
+    const numpadValue = this.add.text(GAME_WIDTH / 2 + 100, startY + rowHeight, this.useNumpad ? 'SIM' : 'NÃO', {
       fontFamily: 'Arial, sans-serif',
       fontSize: '20px',
       color: this.useNumpad ? '#66ff66' : '#ff6666',
@@ -423,7 +423,7 @@ export class SettingsScene extends Phaser.Scene {
     this.controlsContainer.add(numpadValue);
 
     // Theme option
-    const themeLabel = this.add.text(GAME_WIDTH / 2 - 150, startY + rowHeight * 2, 'Theme:', {
+    const themeLabel = this.add.text(GAME_WIDTH / 2 - 150, startY + rowHeight * 2, 'Tema:', {
       fontFamily: 'Arial, sans-serif',
       fontSize: '20px',
       color: '#cccccc',
@@ -461,7 +461,7 @@ export class SettingsScene extends Phaser.Scene {
     const infoText = this.add.text(
       GAME_WIDTH / 2,
       startY + rowHeight * 3 + 20,
-      'QWERTY: WASD for movement\nAZERTY: ZQSD for movement\n\nNumpad: P2 uses arrow keys + numpad\nNo Numpad: P2 uses IJKL + UOPY',
+      'QWERTY: WASD para movimentação\nAZERTY: ZQSD para movimentação\n\nNumérico: P2 usa setas e numpad\nSem numérico: P2 usa IJKL e UOPY',
       {
         fontFamily: 'Arial, sans-serif',
         fontSize: '16px',
@@ -477,7 +477,7 @@ export class SettingsScene extends Phaser.Scene {
     const resetAllBtn = this.add.text(
       GAME_WIDTH / 2,
       GAME_HEIGHT - 100,
-      '[ Reset All Settings ]',
+      '[ Resetar configurações ]',
       {
         fontFamily: 'Arial, sans-serif',
         fontSize: '18px',
@@ -514,7 +514,7 @@ export class SettingsScene extends Phaser.Scene {
     this.rebindText = this.add.text(
       GAME_WIDTH / 2,
       GAME_HEIGHT / 2,
-      'Press any key...\n\n(ESC to cancel)',
+      'Pressione qualquer tecla...\n\n(ESC para cancelar)',
       {
         fontFamily: 'Arial, sans-serif',
         fontSize: '32px',

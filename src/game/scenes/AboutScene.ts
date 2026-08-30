@@ -31,7 +31,7 @@ export class AboutScene extends Phaser.Scene {
     this.createBackgroundEffects();
 
     // Title
-    const title = this.add.text(GAME_WIDTH / 2, 80, 'Sobre', {
+    const title = this.add.text(GAME_WIDTH / 2, 80, 'SOBRE O JOGO', {
       fontFamily: 'Impact, sans-serif',
       fontSize: '64px',
       color: '#ffcc00',
